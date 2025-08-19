@@ -1,0 +1,7 @@
+.venv/
+.env/
+*.csv
+*.xlsx
+mlruns/
+mlartifacts/
+venv/
