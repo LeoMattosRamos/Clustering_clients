@@ -5,3 +5,5 @@
 mlruns/
 mlartifacts/
 venv/
+*.db
+
