@@ -22,7 +22,7 @@ WITH base AS
    
      
 FROM Vendas
-WHERE data >= DATE("2025-08-09", "-12 months") AND data < DATE("2025-08-09")
+WHERE data >= DATE("2025-08-09", "-6 months") AND data < DATE("2025-08-09")
 GROUP BY ID_cliente
 ORDER BY Recencia 
 ),
@@ -35,7 +35,9 @@ idade_base AS (
      GROUP BY 1
 )
 
-SELECT A.*, B.Idade_base
+SELECT  DATE("2025-08-09") AS Dt_ref,
+        A.*,
+        B.Idade_base
 FROM base A
 LEFT JOIN idade_base B
 ON A.ID_cliente = B.ID_cliente

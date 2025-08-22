@@ -9,6 +9,7 @@
 -- Suposicao hoje é dia 2025-08-09
 
 SELECT
+     DATE("2025-08-09") AS Dt_ref,
      ID_cliente,
      idade,
      SUM(CASE WHEN categoria_produto = 'Eletronicos' THEN valor_venda else 0 END) / SUM(valor_venda) as pct_Eletronicos,
@@ -19,6 +20,6 @@ SELECT
 
      
 FROM Vendas
-WHERE data >= DATE("2025-08-09", "-12 months") AND data < DATE("2025-08-09")
+WHERE data >= DATE("2025-08-09", "-6 months") AND data < DATE("2025-08-09")
 GROUP BY ID_cliente
 
