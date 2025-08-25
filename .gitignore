@@ -6,4 +6,4 @@ mlruns/
 mlartifacts/
 venv/
 *.db
-
+images/

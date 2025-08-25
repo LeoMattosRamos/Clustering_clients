@@ -55,7 +55,7 @@ df_rfv["Cluster_rfv"] = model_rfv.predict(df_rfv[features_rfv])
 
 clusters_rfv = {0: "01-Frequentes de Baixo Valor",
        1: "03-VIPs/Alta Receita",
-       2: "02-Frequentes de Alto Valor",
+       2: "02-Frequentes de Medio Valor",
        3:"04-Risco churn"}
 
 
@@ -75,5 +75,7 @@ df_clusters.rename(columns={"Dt_ref_x": "Dt_ref"}, inplace=True)
 
 
 df_clusters.to_sql("Cluster_clients", con, if_exists="append")
+
+
 
 
