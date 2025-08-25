@@ -111,7 +111,7 @@ A abordagem utilizada foi realizada em **duas etapas de clusterização**:
 
 4. **Combinação dos Resultados**
    - Criação do cluster final unindo as duas dimensões
-   - Nomeação final no formato **Cluster_RFQ:Cluster_Categoria**
+   - Nomeação final no formato **Cluster_RFV:Cluster_Categoria**
 
 5. **Armazenamento**
    - Inserção da tabela **Cluster_Clientes** em banco de dados via **SQLAlchemy**

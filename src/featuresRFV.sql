@@ -1,12 +1,6 @@
 
--- RECENCIA
--- FREQUENCIA
--- VALOR
--- TICKET MEDIO
--- idade na base
 
-
--- BASE: Considerando 12 meses a partir da data mais recente
+-- BASE: Considerando 6 meses a partir da data mais recente
 -- Suposicao hoje é dia 2025-08-09
 
 
