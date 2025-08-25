@@ -31,6 +31,11 @@ A segmentação é um passo estratégico para permitir que o time de **marketing
 
 ## 🛠️ Metodologia
 
+### 🔄 Padronização dos Dados
+Antes da aplicação dos algoritmos de clusterização, os dados foram **padronizados** utilizando o `StandardScaler` do **Scikit-learn**.  
+Essa etapa garante que todas as variáveis tenham **média 0** e **desvio padrão 1**, evitando que atributos em diferentes escalas (ex: valores monetários vs. número de compras) influenciem de forma desproporcional na formação dos clusters.
+
+
 A abordagem utilizada foi realizada em **duas etapas de clusterização**:
 
 ### 1️⃣ Etapa 1 – Segmentação por Categoria de Produtos
@@ -64,6 +69,7 @@ A abordagem utilizada foi realizada em **duas etapas de clusterização**:
   - `02-Frequentes de Medio Valor`
   - `03-VIPs/Alta Receita`
   - `04-Risco churn`
+  
 
 ### 📐 Definição do Número de Clusters
 - Para cada etapa, foi utilizado o **Silhouette Score** como métrica para determinar o número ótimo de clusters.  
@@ -91,12 +97,14 @@ A abordagem utilizada foi realizada em **duas etapas de clusterização**:
 
 2. **Clusterização 1 (Categorias de Produtos)**
    - Transformação de compras em proporções (% por categoria)
+   - Padronização dos dados
    - Aplicação do algoritmo **K-Means**
    - Definição do número de clusters via **Silhouette Score**
    - Logging no **MLflow**
 
 3. **Clusterização 2 (RFV)**
    - Cálculo das métricas de Recência, Frequência e Valor
+   - Padronização dos dados
    - Aplicação do algoritmo **K-Means**
    - Definição do número de clusters via **Silhouette Score**
    - Logging no **MLflow**
