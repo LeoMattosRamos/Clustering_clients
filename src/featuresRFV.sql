@@ -12,7 +12,7 @@ WITH base AS
      julianday("2025-08-09") - julianday(MAX(data)) AS Recencia,
      COUNT(DISTINCT(data)) AS Frequencia,
      SUM(valor_venda) AS Valor,
-     SUM(valor_venda) / COUNT(data) as Ticket_medio
+     SUM(valor_venda) / COUNT(DISTINCT(data)) as Ticket_medio
    
      
 FROM Vendas
